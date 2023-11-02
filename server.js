@@ -1,10 +1,10 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const port = 8000;
+const PORT = 8000;
+const HOST = '0.0.0.0'
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.listen(port, () => {
-  console.log(`Express server running at http://localhost:${port}`);
-});
+app.listen(PORT, HOST)
+console.log(`Running on http://${HOST}:${PORT}`)
